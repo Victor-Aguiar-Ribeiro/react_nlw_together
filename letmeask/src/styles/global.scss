@@ -1,0 +1,59 @@
+﻿* {
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+
+  // **************************** COLORS ************************************
+
+--black: #29292E;
+--shadow: #050206;
+--purple: #835AFD;
+--dangerRed: #E73F5D;
+--googleRed: #EA4335;
+--gray-dark: #737380;
+--grey-medium: #A8A8B3;
+--bg-white: #F8F8F8;
+--details-white: #FEFEFE;
+--dark-pink: #E559F9;
+--light-pink: #D67EE2
+}
+
+body {
+  background-color: var(--bg-white)
+}
+
+
+// *********************** BUTTONS AND INPUTS *****************************
+
+.btn{
+  line-height: 0;
+  padding: 0 4.6rem;
+  height: 5rem;
+  margin: auto;
+
+  border: 0;
+  border-radius: .8rem;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+
+  >img {
+    margin-right: .8rem;
+  }
+}
+
+.btn-primary {
+  background: var(--purple);
+}
+
+.btn-googleRed{
+  background: var(--googleRed);
+}
+
+
+
+
+
