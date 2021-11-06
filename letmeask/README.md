@@ -1,4 +1,4 @@
-LetMeAsk project (React, Typercsipt, SASS, Firebase DB)
+🚀 LetMeAsk project (React, Typercsipt, SASS, Firebase DB)
 
 Application developed at Rocketseat event --> NLW Together, React trail
 
