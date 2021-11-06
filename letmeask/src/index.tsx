@@ -5,6 +5,7 @@ import { App } from './App';
 import './services/firebase'
 
 import './styles/global.scss'
+import './styles/sign-in.scss'
 
 ReactDOM.render(
   <React.StrictMode>
