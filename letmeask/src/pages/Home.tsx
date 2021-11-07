@@ -1,4 +1,5 @@
 ﻿import illustrationHome from '../assets/images/illustration.svg'
+import { NewRoom } from '../components/NewRoom'
 import { SignIn } from '../components/SignIn'
 
 
@@ -13,6 +14,7 @@ export function Home(){
 
       <main>
         <SignIn />
+        {/* <NewRoom /> */}
       </main>
 
     </div>
