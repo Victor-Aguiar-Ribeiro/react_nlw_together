@@ -99,9 +99,46 @@ main {
       background: var(--grey-medium);
     }
   }
+}
+// *********************** INPUTS *****************************
 
+input{
+  line-height: 0;
+  height: 5rem;
+  width: 100%;
+  margin: auto;
+  padding: 0 1.6rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  
+  border: 0;
+  border-radius: .8rem;
+  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  
+  >img {
+    margin-right: .8rem;
+  }
 }
 
+input::placeholder {
+  color: var(--grey-medium);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+form input {
+  margin-bottom: 1.6rem;
+}
 
 // ************************ MAX-SCREEN-WIDTH: 860px ********************************
 
