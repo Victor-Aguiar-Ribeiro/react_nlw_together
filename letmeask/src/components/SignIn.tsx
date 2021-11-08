@@ -1,7 +1,8 @@
-﻿import { useNavigate } from 'react-router-dom'
+﻿import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
-import { auth } from '../services/firebase' 
+import { AuthContext } from '../App'
+
 
 import logoGoogle from '../assets/images/google-icon.svg'
 import logo from '../assets/images/logo.svg'
@@ -10,19 +11,12 @@ import { Button } from './Button'
 
 export function SignIn() {
   const navigate = useNavigate();
+  const { user, signInWithGoogle } = useContext(AuthContext)
 
   async function handleCreateRoom() {
-    const provider = new GoogleAuthProvider();
-
-    await signInWithPopup( auth, provider ).then( result => {
-      // Get Google access token. Can be used to access Google API
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential?.accessToken;
-      // Get signed-in user info
-      const user = result.user;
-
-      console.log( result );
-    })
+    if ( !user ) {
+      await signInWithGoogle()
+    }
 
     navigate('/room/create');
   }
