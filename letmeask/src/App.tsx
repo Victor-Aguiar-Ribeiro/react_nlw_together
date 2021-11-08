@@ -1,8 +1,24 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+
+import { NewRoom } from './components/NewRoom';
+import { SignIn } from './components/SignIn';
 import { Home } from "./pages/Home";
+
 
 export function App() {
   return (
-    <Home />
+    <Router>
+      <div id="homeWrapper">
+        <Home />
+        <main>
+          <Routes>
+            <Route path="/room/create" element={<NewRoom />} />
+            <Route path="/" element={<SignIn />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
