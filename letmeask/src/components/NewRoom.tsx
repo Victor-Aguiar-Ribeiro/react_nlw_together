@@ -1,19 +1,16 @@
-﻿import { useContext } from 'react'
-import { AuthContext } from '../contexts/AuthContext' 
-
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 
 import logo from '../assets/images/logo.svg'
 
 import { Button } from './Button'
+import { useAuth } from '../hooks/UseAuth'
 
 export function NewRoom() {
-  const { user } = useContext(AuthContext)
+  const { user } = useAuth()
 
   return (
     <div id="signInWrapper">
           <img src={ logo } alt="Logo da Letmeask" />
-          <h1>{user?.name}</h1>
           <h1>Crie uma nova sala</h1>
           <form action="">
             <label className="srOnly" htmlFor="">Nome da Sala</label>
